@@ -37,3 +37,6 @@ bin-release/
 therion/data/gis/*
 therion/outputs
 therion/data/gis/DEM/*
+*.dxf
+*.xvi
+*.sql
