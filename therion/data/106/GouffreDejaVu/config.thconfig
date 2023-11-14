@@ -72,3 +72,13 @@ export model -o outputs/GouffreDejaVu.lox
 export map -o outputs/GouffreDejaVu-ee.pdf -projection extended -layout local
 
 export map -o outputs/GouffreDejaVu.pdf -projection plan -layout plan
+
+export map -o outputs/GouffreDejaVu-ee.dxf -projection extended -layout local
+export map -o outputs/GouffreDejaVu-ee.svg -projection extended -layout local
+export map -o outputs/GouffreDejaVu-ee.xvi -projection extended -layout local
+
+
+export map -o outputs/GouffreDejaVu -fmt esri
+export map -o outputs/GouffreDejaVu-ee -fmt esri -projection extended
+export database -o outputs/GouffreDejaVu.sql
+export map -o outputs/GouffreDejaVu.csv
