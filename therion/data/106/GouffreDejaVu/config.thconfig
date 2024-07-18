@@ -1,3 +1,4 @@
+encoding  utf-8
 source GouffreDejaVu.th
 
 input ../../../layouts/detailed-p.thl
@@ -12,9 +13,13 @@ layout local
   symbol-hide point passage-height
   symbol-assign line wall:blocks MYEE
   
-  symbol-hide point station-name 
-  symbol-hide line survey
-  symbol-hide point station
+  # symbol-hide point station-name 
+  # symbol-hide line survey
+  # symbol-hide point station
+  # symbol-colo[u]r point station [100 0 0]
+  # symbol-colo[u]r line survey [100 0 0]
+  # symbol-color line survey:splay [100 0 0]
+
   color map-bg transparent
   cs UTM18S
   grid-origin 488596 4451785 0 m 
@@ -66,19 +71,15 @@ endlayout
 
 
 
-#export model -o outputs/GouffreDejaVu.3d -fmt survex
+export model -o outputs/GouffreDejaVu.3d -fmt survex
 export model -o outputs/GouffreDejaVu.lox
-#export atlas -o outputs/GouffreDejaVu.pdf -projection plan -layout local-p
+# #export atlas -o outputs/GouffreDejaVu.pdf -projection plan -layout local-p
+
 export map -o outputs/GouffreDejaVu-ee.pdf -projection extended -layout local
-
 export map -o outputs/GouffreDejaVu.pdf -projection plan -layout plan
-
-export map -o outputs/GouffreDejaVu-ee.dxf -projection extended -layout local
-export map -o outputs/GouffreDejaVu-ee.svg -projection extended -layout local
-export map -o outputs/GouffreDejaVu-ee.xvi -projection extended -layout local
-
-
-export map -o outputs/GouffreDejaVu -fmt esri
-export map -o outputs/GouffreDejaVu-ee -fmt esri -projection extended
 export database -o outputs/GouffreDejaVu.sql
-export map -o outputs/GouffreDejaVu.csv
+
+# for manual measurements in Qgis
+# export map -o outputs/GouffreDejaVu -fmt esri
+# export map -o outputs/GouffreDejaVu-ee -fmt esri -projection extended
+

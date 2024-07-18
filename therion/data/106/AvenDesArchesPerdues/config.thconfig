@@ -12,9 +12,9 @@ layout local
   symbol-hide point passage-height
   symbol-assign line wall:blocks MYEE
   
-  symbol-hide point station-name 
-  symbol-hide line survey
-  symbol-hide point station
+ # symbol-hide point station-name 
+  # symbol-hide line survey
+  # symbol-hide point station
   color map-bg transparent
   cs UTM18S
   grid-origin 488596 4451785 0 m 
@@ -69,7 +69,7 @@ endlayout
 # OUTPUTS
 
 
-#export model -o outputs/AvenDesArchesPerdues.3d -fmt survex
+export model -o outputs/AvenDesArchesPerdues.3d -fmt survex
 #export model -o outputs/AvenDesArchesPerdues.lox
 #export atlas -o outputs/AvenDesArchesPerdues.pdf -projection plan -layout local-p
 
@@ -79,11 +79,15 @@ endlayout
 #export map -o outputs/AvenDesArchesPerdues.pdf -projection plan -layout plan
 
 #esri
-export map -o outputs/AvenDesArchesPerdues -fmt esri
-export map -o outputs/AvenDesArchesPerdues-ee -fmt esri -projection extended
+# export map -o outputs/AvenDesArchesPerdues -fmt esri
+# export map -o outputs/AvenDesArchesPerdues-ee -fmt esri -projection extended
 
-export model -o outputs/AvenDesArchesPerdues -fmt esri
+#export model -o outputs/AvenDesArchesPerdues -fmt esri
 
-export map -o outputs/AvenDesArchesPerdues-ee.dxf -projection extended -layout local
-export map -o outputs/AvenDesArchesPerdues.dxf -projection plan -layout plan
+export map -o outputs/AvenDesArchesPerdues-ee.pdf -projection extended -layout local
+export map -o outputs/AvenDesArchesPerdues.pdf -projection plan -layout plan
+
+export database -o outputs/AvenDesArchesPerdues.sql
+
+
 
