@@ -35,8 +35,17 @@ bin-release/
 *.tif
 
 therion/data/gis/*
+!therion/data/gis/cadastre.js
+!therion/data/gis/lines2D.js
+!therion/data/gis/outlines2D.js
+!therion/data/gis/points_fixes.js
+
 therion/outputs
 therion/data/gis/DEM/*
+
 *.dxf
 *.xvi
 *.sql
+*.ai
+*Illustrator/*
+

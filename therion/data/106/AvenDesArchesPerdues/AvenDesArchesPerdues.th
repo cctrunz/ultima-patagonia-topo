@@ -1,7 +1,7 @@
 
 ## a survey compiled from Visual Topo Data using the visual_therion.py script
 
-survey AvenDesArchesPerdues -entrance 0@Entree -attr cad_num 106022 -attr exped UP2023
+survey AvenDesArchesPerdues -title "Aven des Arches Perdues" -entrance 0@Entree -attr cad_num 106022 -attr exped UP2023
 
     input Entree/Entree.th
     input FenetreMeteo/FenetreMeteo.th
@@ -18,6 +18,9 @@ survey AvenDesArchesPerdues -entrance 0@Entree -attr cad_num 106022 -attr exped 
     equate 64@Collecteur 0@Arches_Perdues_last
     equate 21@Arches_Perdues_last 25@Panthere
     equate 6@Arches_Perdues_Siphon_2 60@Collecteur 
+
+    join Arches_Perdues_last-1p@Arches_Perdues_last Collecteur-2p@Collecteur
+    join FenetreMeteo-1p@FenetreMeteo Panthere-1p@Panthere
 
 
     map m-all-p -projection plan 
